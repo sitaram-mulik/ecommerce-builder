@@ -9,8 +9,9 @@
     "scripts": {
         "start": "node app.js",
         "build-ui": "cd ../distribution-ui && npm run build",
-        "build-and-run": "npm run build-ui && cd ../distribution-server && nodemon app.js monorepo=true",
-        "start-prod": "node app.js monorepo=true",
+        "build-and-run": "npm run build-ui && cd ../distribution-server && node app.js",
+        "run-with-context": "npm run build-ui && cd ../distribution-server && nodemon app.js monorepo=true",
+        "start-prod": "build-ui",
         "dev": "nodemon app.js",
         "lint": "eslint .",
         "lint-fix": "eslint . --fix",

@@ -1,4 +1,4 @@
-const hostname = '{HOSTNAME}'
+const hostname = ''
 
 const environment = {
     production: true,

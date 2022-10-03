@@ -16,7 +16,7 @@ export class ProductsService {
     ) {}
 
     getProducts() {
-        return this.http.get<any>(`${this.baseUrl}/product/details`, {
+        return this.http.get<any>(`/product/details`, {
             headers: {
                 Authorization: `Bearer ${this.service?.authData?.apiAccessToken}`,
             },
@@ -24,7 +24,7 @@ export class ProductsService {
     }
 
     getProduct(id: string) {
-        return this.http.get<any>(`${this.baseUrl}/product/details`, {
+        return this.http.get<any>(`/product/details`, {
             params: {
                 productId: id,
             },
@@ -32,7 +32,7 @@ export class ProductsService {
     }
 
     getOrders(id: string) {
-        return this.http.get<any>(`${this.baseUrl}/product/order-details`, {
+        return this.http.get<any>(`/product/order-details`, {
             params: {
                 orderIds: id,
             },
@@ -40,21 +40,21 @@ export class ProductsService {
     }
 
     addProduct(username: string, productId: string[]) {
-        return this.http.patch<any>(`${this.baseUrl}/product/add-product`, {
+        return this.http.patch<any>(`/product/add-product`, {
             username,
             productId,
         });
     }
 
     removeProduct(username: string, productId: string) {
-        return this.http.patch<any>(`${this.baseUrl}/product/remove-product`, {
+        return this.http.patch<any>(`/product/remove-product`, {
             username,
             productId,
         });
     }
 
     addOrderId(username: string, orderId: string) {
-        return this.http.patch<any>(`${this.baseUrl}/product/add-orderId`, {
+        return this.http.patch<any>(`/product/add-orderId`, {
             username,
             orderId,
         });
@@ -65,15 +65,15 @@ export class ProductsService {
     }
 
     getUserProducts(username: string) {
-        return this.http.get<any>(`${this.baseUrl}/product/user-products`, {
+        return this.http.get<any>(`/product/user-products`, {
             params: {
-                username,
+                username ,
             },
         });
     }
 
     getUserOrders(username: string) {
-        return this.http.get<any>(`${this.baseUrl}/product/user-orders`, {
+        return this.http.get<any>(`/product/user-orders`, {
             params: {
                 username,
             },

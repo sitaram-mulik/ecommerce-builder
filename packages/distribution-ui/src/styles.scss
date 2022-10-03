@@ -2,8 +2,8 @@
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
-@import url('{HOSTNAME}/assets/css/default.css');
-@import url('{HOSTNAME}/assets/css/style.css');
+// @import url('/assets/css/default.css');
+// @import url('/assets/css/style.css');
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!

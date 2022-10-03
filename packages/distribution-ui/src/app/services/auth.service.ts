@@ -57,11 +57,24 @@ export class AuthService {
     userDetail(tenantUrl: string): Observable<any> {
         //return this.http.get<any>(`${tenantUrl}/v2.0/Me`);
         return of({
+            name: {
+                givenName: 'x',
+                familyName: 'y'
+            },
             username: 'x',
             firstname: 'x',
             lastname: 'y',
             uid: '123',
-            email: ''
+            emails: [{value: 'a@b.com'}],
+            addresses: [
+                {
+                    formatted: '',
+                    region: '',
+                    locality: '',
+                    country: '',
+                    postalCode: ''
+                }
+            ]
         });
     }
 
