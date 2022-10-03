@@ -1,0 +1,9 @@
+# dependencies
+node_modules
+angular-build
+.angular
+**/tenant-config.json
+**/distribution-server/distribution/assets/config
+package-lock.json
+.DS_Store
+packages/.DS_Store
